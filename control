@@ -1,0 +1,12 @@
+Package: com.burc334.notifilter
+Name: NotiFilter
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Description: Filter, mute, or allow iOS 18 notifications by app, content, and schedule.
+Depiction: https://burc334.github.io/NotiFilter/
+Icon: https://burc334.github.io/NotiFilter/icon.png
+SileoDepiction: https://burc334.github.io/NotiFilter/depiction.json
+Maintainer: burc334
+Author: burc334
+Section: Tweaks
+Depends: mobilesubstrate, preferenceloader, firmware (>= 18.0)

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>title</key>
+    <string>NotiFilter</string>
+    <key>items</key>
+    <array>
+        <dict>
+            <key>cell</key>
+            <string>PSGroupCell</string>
+            <key>label</key>
+            <string>General</string>
+            <key>footerText</key>
+            <string>Filter notifications by app and content.</string>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSSwitchCell</string>
+            <key>label</key>
+            <string>Enable NotiFilter</string>
+            <key>key</key>
+            <string>Enabled</string>
+            <key>defaults</key>
+            <string>com.burc334.notifilter</string>
+            <key>default</key>
+            <false/>
+            <key>PostNotification</key>
+            <string>com.burc334.notifilter/preferencesChanged</string>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSLinkCell</string>
+            <key>label</key>
+            <string>Filters</string>
+            <key>action</key>
+            <string>viewFilters</string>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSGroupCell</string>
+            <key>label</key>
+            <string>History</string>
+            <key>footerText</key>
+            <string>Only notifications blocked by NotiFilter are recorded.</string>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSLinkCell</string>
+            <key>label</key>
+            <string>Blocked Notifications</string>
+            <key>action</key>
+            <string>viewHistory</string>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSGroupCell</string>
+            <key>label</key>
+            <string>Import / Export</string>
+            <key>footerText</key>
+            <string>Back up or restore your filter list.</string>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSButtonCell</string>
+            <key>label</key>
+            <string>Import Filters</string>
+            <key>action</key>
+            <string>importFilters:</string>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSButtonCell</string>
+            <key>label</key>
+            <string>Export Filters</string>
+            <key>action</key>
+            <string>exportFilters:</string>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSButtonCell</string>
+            <key>label</key>
+            <string>Apply</string>
+            <key>action</key>
+            <string>applySettings:</string>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSGroupCell</string>
+            <key>label</key>
+            <string>About</string>
+            <key>footerText</key>
+            <string>NotiFilter 1.0.0
+Developed by burc334</string>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSButtonCell</string>
+            <key>label</key>
+            <string>Reset to Defaults</string>
+            <key>action</key>
+            <string>resetDefaults:</string>
+        </dict>
+    </array>
+</dict>
+</plist>

@@ -1,0 +1,89 @@
+{
+  "class": "DepictionTabView",
+  "minVersion": "0.1",
+  "tintColor": "#E11D48",
+  "tabs": [
+    {
+      "class": "DepictionStackView",
+      "tabname": "Details",
+      "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "NotiFilter",
+          "subtitle": "Version 1.0.0"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Filter, mute, or allow notifications by app, content, and schedule on iOS 18."
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Package",
+          "text": "com.burc334.notifilter"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "1.0.0"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "RootHide",
+          "text": "iphoneos-arm64e \u00b7 tested on iOS 18.4.1 (Dopamine 3)"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Rootless",
+          "text": "iphoneos-arm64 \u00b7 expected on iOS 18+ rootless jailbreaks"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "### What it does\n\n- Filters notifications by app, or across all apps.\n- Matches title, subtitle, message, or all text.\n- Match modes: Contains, Starts With, Ends With, Exact, Regex, and Always.\n- Block, Mute, and Allow actions with deterministic precedence.\n- Weekday and overnight schedules.\n- Blocked-notification history with configurable count and day limits.\n- Versioned JSON import/export with Merge and Replace flows.\n- Native preference pane with no respring required for settings changes."
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "### Actions\n\n- **Block** drops the notification before it is presented. Only hard Block decisions are recorded in History.\n- **Mute** keeps the notification in Notification Center while suppressing sound, display wake, and lock-screen alerting.\n- **Allow** is an exception rule. A matching Allow filter overrides matching Block and Mute filters.\n- **Critical alerts** bypass filtering entirely.\n\nAllow overrides Block and Mute; Block overrides Mute."
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "### Schedules\n\nEach filter can have a schedule using Monday\u2013Sunday weekdays and a start and end time. A schedule that crosses midnight uses the selected start day; for example, a Monday 22:00\u201307:00 window runs through Tuesday morning. Equal start and end times are inactive."
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "### History\n\nHistory records only hard Block decisions. It never records Mute or Allow decisions and does not show app icons.\n\n- History Limit: 25, 50, 100, 250, or 500 entries; default 100.\n- Keep For: 1, 3, 7, 14, or 30 days; default 30.\n- Clear History requires confirmation."
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "### Import and export\n\nFilters can be exported as versioned JSON and imported from a file. Merge is the default import action and updates filters by UUID while keeping unrelated filters. Replace removes all existing filters and requires a second confirmation."
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "### Install\n\n1. Download the matching deb: RootHide (`iphoneos-arm64e`) or Rootless (`iphoneos-arm64`).\n2. Install with Sileo, Zebra, or Filza.\n3. Respring after installation so SpringBoard loads the tweak and preference bundle.\n4. Open **Settings \u2192 NotiFilter**, enable NotiFilter, and add your filters.\n5. Tap **Apply** after changing settings. No respring is required for settings changes."
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "### Verification\n\nSHA-256 checksums are published in `SHA256SUMS.txt` with the GitHub release. Verify the downloaded deb before installing it."
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "### Privacy\n\nNotiFilter does not use analytics or contact remote services. Filter settings and blocked-notification history are stored locally on the device."
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "License",
+          "text": "MIT"
+        }
+      ]
+    },
+    {
+      "class": "DepictionStackView",
+      "tabname": "Changelog",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "### 1.0.0\n\n- Initial release.\n- App- and content-based notification filters.\n- Block, Mute, and Allow actions with deterministic precedence.\n- Weekday and overnight schedules.\n- Blocked-notification history with count and day limits.\n- Versioned JSON import/export with Merge and Replace flows.\n- Rootless and RootHide packages."
+        }
+      ]
+    }
+  ]
+}

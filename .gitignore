@@ -1,0 +1,13 @@
+.theos/
+packages/
+builds/
+obj/
+build*.log
+roothide.log
+*.log
+*.deb
+*.dSYM
+.DS_Store
+
+# Local release review bundle
+RELEASE_REVIEW.md

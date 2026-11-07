@@ -1,0 +1,10 @@
+{
+    entry = {
+        bundle = "NotiFilterPrefs";
+        cell = PSLinkCell;
+        detail = "NotiFilterRootListController";
+        isController = 1;
+        label = "NotiFilter";
+        icon = "icon.png";
+    };
+}

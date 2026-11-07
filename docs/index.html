@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#1F1F2E">
+  <meta name="description" content="NotiFilter is a rootless iOS 18 jailbreak tweak that filters notifications by app, content, and schedule.">
+  <meta property="og:title" content="NotiFilter">
+  <meta property="og:description" content="Filter, mute, or allow notifications by app, content, and schedule on iOS 18.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://burc334.github.io/NotiFilter/icon.png?v=1.0.0">
+  <title>NotiFilter</title>
+  <link rel="icon" href="icon.png?v=1.0.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="hero-copy">
+      <p class="eyebrow">Rootless + RootHide</p>
+      <h1>NotiFilter</h1>
+      <p class="summary">Filter, mute, or allow notifications by app, content, and schedule on iOS 18.</p>
+      <div class="meta">
+        <span>Version 1.0.0</span>
+        <span><code>com.burc334.notifilter</code></span>
+        <span>MIT</span>
+      </div>
+      </div>
+      <img class="hero-icon" src="icon.png?v=1.0.0" width="112" height="112" alt="NotiFilter icon">
+    </header>
+
+    <section class="card">
+      <h2>Compatibility</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Build</th>
+            <th>Architecture</th>
+            <th>Compatibility</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>RootHide</td>
+            <td><code>iphoneos-arm64e</code></td>
+            <td>Tested on iOS 18.4.1 (Dopamine 3, RootHide)</td>
+          </tr>
+          <tr>
+            <td>Rootless</td>
+            <td><code>iphoneos-arm64</code></td>
+            <td>Expected to work on iOS 18+ rootless jailbreaks</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="note">NotiFilter requires iOS 18.0 or later and targets SpringBoard notifications. The rootless build is expected to work on iOS 18+ rootless jailbreaks.</p>
+    </section>
+
+    <section class="card">
+      <h2>What it does</h2>
+      <ul>
+        <li>Filters notifications by app, or across all apps.</li>
+        <li>Matches title, subtitle, message, or all text.</li>
+        <li>Match modes: Contains, Starts With, Ends With, Exact, Regex, and Always.</li>
+        <li>Block, Mute, and Allow actions with deterministic precedence.</li>
+        <li>Weekday and overnight schedules.</li>
+        <li>Blocked-notification history with configurable count and day limits.</li>
+        <li>Versioned JSON import/export with Merge and Replace flows.</li>
+        <li>Native preference pane with no respring required for settings changes.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Actions</h2>
+      <ul>
+        <li><strong>Block</strong> drops the notification before it is presented. Only hard Block decisions are recorded in History.</li>
+        <li><strong>Mute</strong> keeps the notification in Notification Center while suppressing sound, display wake, and lock-screen alerting.</li>
+        <li><strong>Allow</strong> is an exception rule. A matching Allow filter overrides matching Block and Mute filters.</li>
+        <li><strong>Critical alerts</strong> bypass filtering entirely.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Schedules</h2>
+      <p>Each filter can have a schedule using Monday–Sunday weekdays and a start and end time. A schedule that crosses midnight uses the selected start day; for example, a Monday 22:00–07:00 window runs through Tuesday morning. Equal start and end times are inactive.</p>
+    </section>
+
+    <section class="card">
+      <h2>History</h2>
+      <p>History records only hard Block decisions. It never records Mute or Allow decisions and does not show app icons.</p>
+      <ul>
+        <li>History Limit: 25, 50, 100, 250, or 500 entries; default 100.</li>
+        <li>Keep For: 1, 3, 7, 14, or 30 days; default 30.</li>
+        <li>Clear History requires confirmation.</li>
+      </ul>
+      <p class="note">History is stored locally in the NotiFilter preference domain. NotiFilter does not use analytics or contact remote services.</p>
+    </section>
+
+    <section class="card">
+      <h2>Import and export</h2>
+      <p>Filters can be exported as versioned JSON and imported from a file. Merge is the default import action and updates filters by UUID while keeping unrelated filters. Replace removes all existing filters and requires a second confirmation.</p>
+    </section>
+
+    <section class="card">
+      <h2>How it works</h2>
+      <p>NotiFilter evaluates filters in the notification pipeline before presentation. Hard Block decisions stop non-critical bulletins at the BulletinBoard layer, with a dispatcher fallback. Mute preserves the Notification Center entry while disabling sound, display wake, and lock-screen alerting. Critical alerts are allowed before filter evaluation, and an unknown critical state fails open.</p>
+    </section>
+
+    <section class="card">
+      <h2>Install</h2>
+      <ol>
+        <li>Download the matching deb:
+          <ul>
+            <li>RootHide: <code>com.burc334.notifilter_1.0.0_iphoneos-arm64e.deb</code></li>
+            <li>Rootless: <code>com.burc334.notifilter_1.0.0_iphoneos-arm64.deb</code></li>
+          </ul>
+        </li>
+        <li>Install with Sileo, Zebra, or Filza.</li>
+        <li>Respring after installation so SpringBoard loads the tweak and preference bundle.</li>
+        <li>Open <strong>Settings → NotiFilter</strong>, enable NotiFilter, and add your filters.</li>
+        <li>Tap <strong>Apply</strong> after changing settings. No respring is required for settings changes.</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>Verification</h2>
+      <p>SHA-256 checksums are published in <code>SHA256SUMS.txt</code> with the GitHub release. Verify the downloaded deb before installing it.</p>
+    </section>
+
+    <section class="card">
+      <h2>Privacy</h2>
+      <p>NotiFilter does not use analytics or contact remote services. Filter settings and blocked-notification history are stored locally on the device.</p>
+    </section>
+
+    <section class="card">
+      <h2>Support</h2>
+      <p>Open an issue on the <a href="https://github.com/burc334/NotiFilter/issues">GitHub repository</a>. Include your iOS version, jailbreak, device model, and NotiFilter version.</p>
+    </section>
+
+    <section class="card">
+      <h2>License</h2>
+      <p>MIT</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>NotiFilter · Rootless + RootHide</p>
+  </footer>
+</body>
+</html>
