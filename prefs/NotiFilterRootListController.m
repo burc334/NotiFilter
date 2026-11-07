@@ -155,9 +155,7 @@
 }
 
 - (void)presentImportOptionsForFilters:(NSArray<NFFilter *> *)filters {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self presentImportOptionsForFiltersNow:filters];
-    });
+    [self presentImportOptionsForFiltersNow:filters];
 }
 
 - (void)presentImportOptionsForFiltersNow:(NSArray<NFFilter *> *)filters {
@@ -193,9 +191,7 @@
 }
 
 - (void)confirmReplaceWithFilters:(NSArray<NFFilter *> *)filters {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self confirmReplaceWithFiltersNow:filters];
-    });
+    [self confirmReplaceWithFiltersNow:filters];
 }
 
 - (void)confirmReplaceWithFiltersNow:(NSArray<NFFilter *> *)filters {
@@ -234,16 +230,14 @@
 }
 
 - (void)showMessageWithTitle:(NSString *)title message:(NSString *)message {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        UIAlertController *alert =
-            [UIAlertController alertControllerWithTitle:title
-                                                message:message
-                                         preferredStyle:UIAlertControllerStyleAlert];
-        [alert addAction:[UIAlertAction actionWithTitle:@"OK"
-                                                  style:UIAlertActionStyleDefault
-                                                handler:nil]];
-        [self presentViewController:alert animated:YES completion:nil];
-    });
+    UIAlertController *alert =
+        [UIAlertController alertControllerWithTitle:title
+                                            message:message
+                                     preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"OK"
+                                              style:UIAlertActionStyleDefault
+                                            handler:nil]];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (void)showError:(NSString *)message {

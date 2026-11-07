@@ -125,7 +125,7 @@ void NFSettingsSetHistoryRetentionDays(NSInteger days) {
 
 void NFSettingsPostChanged(void) {
     CFNotificationCenterPostNotification(CFNotificationCenterGetDarwinNotifyCenter(),
-                                         CFSTR("com.burc334.notifilter/preferencesChanged"),
+                                         (__bridge CFStringRef)NFPreferencesChangedNotification,
                                          NULL,
                                          NULL,
                                          YES);

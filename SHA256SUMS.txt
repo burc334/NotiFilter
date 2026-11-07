@@ -1,2 +1,2 @@
-15eef89f667c8c742af0e55da478658868d5a4fa594bd04d69cd3ae326365af6  com.burc334.notifilter_1.0.0_iphoneos-arm64.deb
-a82e265d143aa039d47e2d78ceaf74d6919e7dd0ec8c5cb7d2cea4a37042e207  com.burc334.notifilter_1.0.0_iphoneos-arm64e.deb
+d77f429799ee9132420b898b9d21f1b9c16bf9fa1aab8eb937c8b6224335022f  com.burc334.notifilter_1.0.1_iphoneos-arm64.deb
+103370c9328ea943dfeae549935db25f6df01c3a015acefac5e42dee383ff658  com.burc334.notifilter_1.0.1_iphoneos-arm64e.deb

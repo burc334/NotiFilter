@@ -89,7 +89,7 @@ static void NFPreferencesChanged(CFNotificationCenterRef center,
     CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(),
                                     NULL,
                                     NFPreferencesChanged,
-                                    (__bridge CFStringRef)@"com.burc334.notifilter/preferencesChanged",
+                                    (__bridge CFStringRef)NFPreferencesChangedNotification,
                                     NULL,
                                     CFNotificationSuspensionBehaviorDeliverImmediately);
 }

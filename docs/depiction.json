@@ -10,11 +10,11 @@
         {
           "class": "DepictionHeaderView",
           "title": "NotiFilter",
-          "subtitle": "Version 1.0.0"
+          "subtitle": "Version 1.0.1"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "Filter, mute, or allow notifications by app, content, and schedule on iOS 18."
+          "markdown": "Filter, mute, or allow notifications by app, content, and schedule."
         },
         {
           "class": "DepictionTableTextView",
@@ -24,17 +24,17 @@
         {
           "class": "DepictionTableTextView",
           "title": "Version",
-          "text": "1.0.0"
+          "text": "1.0.1"
         },
         {
           "class": "DepictionTableTextView",
-          "title": "RootHide",
-          "text": "iphoneos-arm64e \u00b7 tested on iOS 18.4.1 (Dopamine 3)"
+          "title": "roothide",
+          "text": "iphoneos-arm64e · tested on iOS 18.4.1 (Dopamine 3)"
         },
         {
           "class": "DepictionTableTextView",
-          "title": "Rootless",
-          "text": "iphoneos-arm64 \u00b7 expected on iOS 18+ rootless jailbreaks"
+          "title": "rootless",
+          "text": "iphoneos-arm64 · expected on iOS 18+ rootless jailbreaks"
         },
         {
           "class": "DepictionMarkdownView",
@@ -46,7 +46,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "### Schedules\n\nEach filter can have a schedule using Monday\u2013Sunday weekdays and a start and end time. A schedule that crosses midnight uses the selected start day; for example, a Monday 22:00\u201307:00 window runs through Tuesday morning. Equal start and end times are inactive."
+          "markdown": "### Schedules\n\nEach filter can have a schedule using Monday–Sunday weekdays and a start and end time. A schedule that crosses midnight uses the selected start day; for example, a Monday 22:00–07:00 window runs through Tuesday morning. Equal start and end times are inactive."
         },
         {
           "class": "DepictionMarkdownView",
@@ -58,11 +58,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "### Install\n\n1. Download the matching deb: RootHide (`iphoneos-arm64e`) or Rootless (`iphoneos-arm64`).\n2. Install with Sileo, Zebra, or Filza.\n3. Respring after installation so SpringBoard loads the tweak and preference bundle.\n4. Open **Settings \u2192 NotiFilter**, enable NotiFilter, and add your filters.\n5. Tap **Apply** after changing settings. No respring is required for settings changes."
-        },
-        {
-          "class": "DepictionMarkdownView",
-          "markdown": "### Verification\n\nSHA-256 checksums are published in `SHA256SUMS.txt` with the GitHub release. Verify the downloaded deb before installing it."
+          "markdown": "### Verification\n\nSHA-256 checksums are published in `SHA256SUMS.txt` with the GitHub release."
         },
         {
           "class": "DepictionMarkdownView",
@@ -72,6 +68,12 @@
           "class": "DepictionTableTextView",
           "title": "License",
           "text": "MIT"
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "View source on GitHub",
+          "action": "https://github.com/burc334/NotiFilter",
+          "openExternal": true
         }
       ]
     },
@@ -81,7 +83,7 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "### 1.0.0\n\n- Initial release.\n- App- and content-based notification filters.\n- Block, Mute, and Allow actions with deterministic precedence.\n- Weekday and overnight schedules.\n- Blocked-notification history with count and day limits.\n- Versioned JSON import/export with Merge and Replace flows.\n- Rootless and RootHide packages."
+          "markdown": "### 1.0.1\n\n- Internal cleanup only; no user-facing behavior changes.\n\n### 1.0.0\n\n- Initial release.\n- App- and content-based notification filters.\n- Block, Mute, and Allow actions with deterministic precedence.\n- Weekday and overnight schedules.\n- Blocked-notification history with count and day limits.\n- Versioned JSON import/export with Merge and Replace flows.\n- rootless and roothide packages."
         }
       ]
     }

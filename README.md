@@ -2,22 +2,22 @@
   <img src="docs/icon.png" width="160" alt="NotiFilter icon">
 </p>
 
-<h1 align="center">NotiFilter</h1>
+# NotiFilter
 
 <p align="center"><strong>NotiFilter is a rootless iOS 18 jailbreak tweak that filters notifications by app, content, and schedule.</strong></p>
 
 - Package: `com.burc334.notifilter`
-- Version: `1.0.0`
-- Tested: iOS 18.4.1 (Dopamine 3, RootHide) on iPhone 11 Pro Max
-- Builds: rootless (`iphoneos-arm64`) and RootHide (`iphoneos-arm64e`)
+- Version: `1.0.1`
+- Tested: iOS 18.4.1 (Dopamine 3, roothide) on iPhone 11 Pro Max
+- Builds: rootless (`iphoneos-arm64`) and roothide (`iphoneos-arm64e`)
 - License: MIT
 
 ## Compatibility
 
 | Build | Architecture | Compatibility |
 |---|---|---|
-| RootHide | `iphoneos-arm64e` | Tested on iOS 18.4.1 (Dopamine 3, RootHide) |
-| Rootless | `iphoneos-arm64` | Expected to work on iOS 18+ rootless jailbreaks |
+| roothide | `iphoneos-arm64e` | Tested on iOS 18.4.1 (Dopamine 3, roothide) |
+| rootless | `iphoneos-arm64` | Expected to work on iOS 18+ rootless jailbreaks |
 
 NotiFilter requires iOS 18.0 or later and targets SpringBoard notifications. The rootless build is expected to work on iOS 18+ rootless jailbreaks.
 
@@ -65,9 +65,15 @@ NotiFilter evaluates filters in the notification pipeline before presentation. H
 
 ## Install
 
+### Sileo
+
+Add `https://burc334.github.io/apt/` in Sileo, then install NotiFilter.
+
+### Manual
+
 1. Download the deb matching your jailbreak from the latest GitHub release:
-   - RootHide: `com.burc334.notifilter_1.0.0_iphoneos-arm64e.deb`
-   - Rootless: `com.burc334.notifilter_1.0.0_iphoneos-arm64.deb`
+   - roothide: `com.burc334.notifilter_1.0.1_iphoneos-arm64e.deb`
+   - rootless: `com.burc334.notifilter_1.0.1_iphoneos-arm64.deb`
 2. Install it with Sileo, Zebra, or Filza.
 3. Respring after installation so SpringBoard loads the tweak and preference bundle.
 4. Open **Settings → NotiFilter**, enable NotiFilter, and add your filters.
@@ -81,7 +87,7 @@ make clean package FINALPACKAGE=1
 ./tools/make-roothide.sh
 ```
 
-The rootless deb is written to `packages/`. The RootHide script converts the latest rootless package to `iphoneos-arm64e`.
+The rootless deb is written to `packages/`. The roothide script converts the latest rootless package to `iphoneos-arm64e`.
 
 ## Verification
 
